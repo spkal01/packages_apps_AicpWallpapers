@@ -22,18 +22,18 @@
     <color name="muzei_color">@color/light_theme_accent</color>
 
     <!-- Light Theme -->
-    <color name="light_theme_primary_dark">#039BE5</color>
-    <color name="light_theme_primary">#29B6F6</color>
-    <color name="light_theme_accent">#22A6B3</color>
+    <color name="light_theme_primary_dark">#ffffff</color>
+    <color name="light_theme_primary">#ffffff</color>
+    <color name="light_theme_accent">#32CD32</color>
     <color name="light_theme_background">#fafafa</color>
     <color name="light_theme_card_background">#ffffff</color>
     <color name="light_theme_dialogs_button_color">@color/light_theme_accent</color>
     <color name="splash_light_status_bar">@color/light_theme_primary_dark</color>
 
     <!-- Dark Theme -->
-    <color name="dark_theme_primary_dark">#039BE5</color>
-    <color name="dark_theme_primary">#29B6F6</color>
-    <color name="dark_theme_accent">#69F0AE</color>
+    <color name="dark_theme_primary_dark">#000000</color>
+    <color name="dark_theme_primary">#000000</color>
+    <color name="dark_theme_accent">#990000</color>
     <color name="dark_theme_background">#303030</color>
     <color name="dark_theme_card_background">#424242</color>
     <color name="dark_theme_dialogs_button_color">@color/dark_theme_accent</color>
