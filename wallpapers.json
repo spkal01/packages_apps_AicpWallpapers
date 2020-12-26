@@ -113,54 +113,19 @@
     {
         "name": aicp17",
         "author": "aicp",
-        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_13.png",
-        "downloadable": true,
-        "dimensions": "1080x1920"
-    },
-    {
-        "name": aicp18",
-        "author": "aicp",
-        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_18.jpg",
-        "downloadable": true,
-        "dimensions": "1080x1920"
-    },
-    {
-        "name": aicp19",
-        "author": "aicp",
-        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_19.jpg",
-        "downloadable": true,
-        "dimensions": "1080x1920"
-    },
-    {
-        "name": aicp20",
-        "author": "aicp",
         "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_20.jpg",
         "downloadable": true,
         "dimensions": "2160x3840"
     },
     {
-        "name": aicp21",
-        "author": "aicp",
-        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_21.png",
-        "downloadable": true,
-        "dimensions": "2242x3992"
-    },
-    {
-        "name": aicp22",
-        "author": "aicp",
-        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_22.png",
-        "downloadable": true,
-        "dimensions": "1080x1920"
-    },
-    {
-        "name": aicp23",
+        "name": aicp18",
         "author": "aicp",
         "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_23.png",
         "downloadable": true,
         "dimensions": "1440x2560"
     },
     {
-        "name": aicp24",
+        "name": aicp19",
         "author": "aicp",
         "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/aicp_24.jpg",
         "downloadable": true,
@@ -291,5 +256,19 @@
         "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/circular_18.png",
         "downloadable": true,
         "dimensions": "2880x2560"
+    },
+    {
+        "name": aicp on fire",
+        "author": "Makkoro",
+        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/fire.jpg",
+        "downloadable": true,
+        "dimensions": "2160x4680"
+    },
+    {
+        "name": aicp on ice",
+        "author": "Makkoro",
+        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/ice.jpg",
+        "downloadable": true,
+        "dimensions": "2160x4680"
     }
 ]
