@@ -16,27 +16,27 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string-array name="credits_photos" formatted="false" tools:ignore="TypographyDashes">
-        <item>https://lh3.googleusercontent.com/-0mdcClKXlgM/AAAAAAAAAAI/AAAAAAAAAAA/xgdLWeAg7pM/s120-c/photo.jpg</item>
+        <item>https://www.aicp-rom.com/img/other/aicp_vector.png</item>
         <item>https://ssl.gstatic.com/images/branding/product/2x/avatar_square_grey_512dp.png</item>
     </string-array>
 
     <string-array name="credits_titles">
-        <item>Your Name</item>
-        <item>Another Name</item>
+        <item>Aicp</item>
+        <item>makkosan</item>
     </string-array>
 
     <string-array name="credits_descriptions">
-        <item>Details of first credited person</item>
-        <item>Details of another credited person</item>
+        <item>AICP is a customized version of Android that offers customizations and a clean UI Enviroment with different things to do</item>
+        <item>Graphical designer and a fan of Aicp</item>
     </string-array>
 
     <string-array name="credits_buttons">
-        <item>Google+|Instagram</item>
-        <item>Facebook|Website|Twitter</item>
+        <item>Github|Discord|Gerrit</item>
+        <item>Telegram</item>
     </string-array>
 
     <string-array name="credits_links">
-        <item>https://www.google.com/+JahirFiquitivaR|http://instagram.com/jahirfiquitiva</item>
-        <item>https://facebook.com/|https://jahirfiquitiva.com/|https://twitter.com/jahirfiquitiva</item>
+        <item>https://github.com/AICP|https://discord.com/invite/nMQUVRD|https://gerrit.aicp-rom.com/</item>
+        <item>https://t.me/makkosan</item>
     </string-array>
 </resources>
