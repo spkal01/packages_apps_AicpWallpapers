@@ -258,16 +258,16 @@
         "dimensions": "2880x2560"
     },
     {
-        "name": aicp on fire",
+        "name": aicp-fire",
         "author": "Makkoro",
         "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/fire.jpg",
         "downloadable": true,
         "dimensions": "2160x4680"
     },
     {
-        "name": aicp on ice",
+        "name": aicp-ice",
         "author": "Makkoro",
-        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/ice.jpg",
+        "url": "https://raw.githubusercontent.com/spkal01/packages_apps_AicpWallpapers/master/Images/cold.jpg",
         "downloadable": true,
         "dimensions": "2160x4680"
     }
