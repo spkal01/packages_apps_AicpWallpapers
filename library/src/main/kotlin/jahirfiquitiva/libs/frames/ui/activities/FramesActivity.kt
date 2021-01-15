@@ -15,13 +15,16 @@
  */
 package jahirfiquitiva.libs.frames.ui.activities
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.room.Room
 import androidx.viewpager.widget.ViewPager
 import ca.allanwang.kau.utils.contentView
@@ -87,7 +90,7 @@ abstract class FramesActivity : BaseFramesActivity<FramesKonfigs>(), FavsDbManag
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+        val sharedPreferences = getSharedPreferences("Default",Context.MODE_PRIVATE);
         hasCollections = boolean(R.bool.show_collections_tab)
         val correct = if (hasCollections) 1 else 0
         lastSection = savedInstanceState?.getInt("current", correct) ?: correct
@@ -95,41 +98,59 @@ abstract class FramesActivity : BaseFramesActivity<FramesKonfigs>(), FavsDbManag
         setContentView(R.layout.activity_main)
         
         setSupportActionBar(toolbar)
-        
+        if (!sharedPreferences.getBoolean("first_login", false)){
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle(R.string.warning)
+                    .setMessage(R.string.first_login_message)
+                    .setPositiveButton(R.string.ok) {
+                        dialog, id ->
+                        sharedPreferences.edit().putBoolean("first_login",true).apply();
+                        dialog.cancel()
+                        startUp()
+                    }
+                    .setCancelable(false)
+            builder.create().show()
+        } else {
+            startUp()
+        }
+
+    }
+
+    private fun startUp() {
         initPagerAdapter()
-        
+
         tabs?.setTabTextColors(
-            getDisabledTextColorFor(primaryColor),
-            if (boolean(R.bool.accent_in_tabs)) accentColor
-            else getPrimaryTextColorFor(primaryColor))
+                getDisabledTextColorFor(primaryColor),
+                if (boolean(R.bool.accent_in_tabs)) accentColor
+                else getPrimaryTextColorFor(primaryColor))
         tabs?.setSelectedTabIndicatorColor(
-            if (boolean(R.bool.accent_in_tabs)) accentColor
-            else getPrimaryTextColorFor(primaryColor))
+                if (boolean(R.bool.accent_in_tabs)) accentColor
+                else getPrimaryTextColorFor(primaryColor))
         if (boolean(R.bool.show_icons_in_tabs)) {
             tabs?.setTabsIconsColors(
-                getInactiveIconsColorFor(primaryColor),
-                if (boolean(R.bool.accent_in_tabs)) accentColor
-                else getActiveIconsColorFor(primaryColor))
+                    getInactiveIconsColorFor(primaryColor),
+                    if (boolean(R.bool.accent_in_tabs)) accentColor
+                    else getActiveIconsColorFor(primaryColor))
         }
-        
+
         buildTabs()
-        
+
         tabs?.addOnTabSelectedListener(
-            object : TabLayout.ViewPagerOnTabSelectedListener(pager) {
-                override fun onTabSelected(tab: TabLayout.Tab?) {
-                    tab?.let { postDelayed(0) { navigateToSection(it.position) } }
-                }
-                
-                override fun onTabReselected(tab: TabLayout.Tab?) = scrollToTop()
-                override fun onTabUnselected(tab: TabLayout.Tab?) {}
-            })
+                object : TabLayout.ViewPagerOnTabSelectedListener(pager) {
+                    override fun onTabSelected(tab: TabLayout.Tab?) {
+                        tab?.let { postDelayed(0) { navigateToSection(it.position) } }
+                    }
+
+                    override fun onTabReselected(tab: TabLayout.Tab?) = scrollToTop()
+                    override fun onTabUnselected(tab: TabLayout.Tab?) {}
+                })
         pager?.addOnPageChangeListener(
-            TabLayout.TabLayoutOnPageChangeListener(tabs))
-        
+                TabLayout.TabLayoutOnPageChangeListener(tabs))
+
         pager?.offscreenPageLimit = tabs?.tabCount ?: 2
-        
+
         navigateToSection(lastSection, true)
-        
+
         favsViewModel.observe(this) { notifyFavsToFrags(it) }
         doAsync { favsViewModel.loadData(favsDB.favoritesDao(), true) }
     }

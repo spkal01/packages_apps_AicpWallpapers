@@ -32,4 +32,7 @@
 
     <!-- Terms and Conditions link or url -->
     <string name="terms_conditions_link">""</string>
+    <string name="warning">Warning!</string>
+    <string name="first_login_message">Your message there</string>
+    <string name="ok">OK</string>
 </resources>

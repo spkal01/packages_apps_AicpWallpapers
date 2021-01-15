@@ -16,6 +16,7 @@
 package jahirfiquitiva.libs.frames.ui.activities.base
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -96,7 +97,7 @@ abstract class BaseFramesActivity<T : FramesKonfigs> : BaseWallpaperActionsActiv
     
     override var wallpaper: Wallpaper? = null
     override val allowBitmapApply: Boolean = false
-    
+
     @SuppressLint("MissingSuperCall")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

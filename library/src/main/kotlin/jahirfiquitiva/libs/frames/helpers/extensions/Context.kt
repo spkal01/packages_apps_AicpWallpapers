@@ -88,7 +88,10 @@ fun Context.createHeartIcon(checked: Boolean): Drawable? =
     drawable(if (checked) "ic_heart" else "ic_heart_outline")
 
 fun Context.showChanges() {
-    showChangelog(R.xml.changelog, R.string.changelog, R.string.dismiss, secondaryTextColor)
+    val sharedPreferences = getSharedPreferences("Default", Context.MODE_PRIVATE);
+    if (sharedPreferences.getBoolean("first_login", false)){
+        showChangelog(R.xml.changelog, R.string.changelog, R.string.dismiss, secondaryTextColor)
+    }
 }
 
 val Context.dataCacheSize: String
