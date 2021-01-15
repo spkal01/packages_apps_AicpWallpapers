@@ -16,8 +16,8 @@
   -->
 <resources>
     <version title="v1.0.0" />
-    <item text="Be aware that once you advance to the next screen the app will download all the images" />
-    <item text="The total size of download will be around 50 mb" />
-    <item text="Depending on your internet connection the image loading will be instant or take some minutes" />
+    <item text="Initial build" />
+    <item text="" />
+    <item text="" />
     <item text="" /> <!-- this one is empty and therefore ignored -->
 </resources>
